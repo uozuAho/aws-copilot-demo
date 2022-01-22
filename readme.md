@@ -8,8 +8,7 @@ Follows the tutorials here:
 - https://aws.amazon.com/blogs/containers/automatically-deploying-your-container-application-with-aws-copilot/
 
 # Creating this project from scratch
-This is how this repo + sit was created. You should be able to create your own
-copy of this site by following these steps.
+Follow these steps to create your own copy of this site on AWS.
 
 ## install stuff
 - sign up to AWS
@@ -110,7 +109,5 @@ copilot svc logs --follow
 # todo
 - how to bring down the app?
     - just delete the cf stacks?
-- how to deploy on push?
-    - https://aws.amazon.com/blogs/containers/automatically-deploying-your-container-application-with-aws-copilot/
 - how to monitor costs?
 - how to monitor health?
