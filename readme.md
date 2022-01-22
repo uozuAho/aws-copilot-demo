@@ -3,7 +3,7 @@
 Example of building and deploying an app using
 [AWS Copilot](https://aws.amazon.com/containers/copilot/).
 
-Follows the tutorials here:
+Created by following the tutorials here:
 - https://aws.amazon.com/blogs/containers/introducing-aws-copilot/
 - https://aws.amazon.com/blogs/containers/automatically-deploying-your-container-application-with-aws-copilot/
 
@@ -51,10 +51,10 @@ At this point, you'll have a number of cloudformation stacks. My knowledge of
 cloudformation is a little shaky, but here's my understanding of each stack's
 purpose. Assuming an app name of aws-copilot-demo:
 
-- aws-copilot-demo-infrastructure-roles: IAM roles specific to this application
-- StackSet-aws-copilot-demo-infrastructure-*: storage for build artifacts
-- aws-copilot-demo-test: infrastructure template for the test environment
-- aws-copilot-demo-test-aws-copilot-demo: deployed test environment
+- `aws-copilot-demo-infrastructure-roles`: IAM roles specific to this application
+- `StackSet-aws-copilot-demo-infrastructure-*`: storage for build artifacts
+- `aws-copilot-demo-test`: infrastructure template for the test environment
+- `aws-copilot-demo-test-aws-copilot-demo`: deployed test environment
 
 ## Creating a separate production environment
 The steps above created a 'test' environment. Create another one:
@@ -70,7 +70,7 @@ copilot env init
 This creates another cloudformation stack template with the name '*-production'.
 The site's not running yet though.
 
-Update [](./copilot/aws-copilot-demo/manifest.yml):
+Update [manifest.yml](./copilot/aws-copilot-demo/manifest.yml):
 
 ```diff
 -#environments:
@@ -95,8 +95,8 @@ copilot svc deploy --env production
 Once this finishes, you should get a link to your production app, and have two
 new cloudformation stacks:
 
-- aws-copilot-demo-production: infrastructure template for the production environment
-- aws-copilot-demo-production-aws-copilot-demo: deployed production environment
+- `aws-copilot-demo-production`: infrastructure template for the production environment
+- `aws-copilot-demo-production-aws-copilot-demo`: deployed production environment
 
 ## ops n stuff
 ```sh
