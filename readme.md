@@ -3,7 +3,9 @@
 Example of building and deploying an app using
 [AWS Copilot](https://aws.amazon.com/containers/copilot/).
 
-Follows the tutorial here: https://aws.amazon.com/blogs/containers/introducing-aws-copilot/
+Follows the tutorials here:
+- https://aws.amazon.com/blogs/containers/introducing-aws-copilot/
+- https://aws.amazon.com/blogs/containers/automatically-deploying-your-container-application-with-aws-copilot/
 
 # Creating this project from scratch
 This is how this repo + sit was created. You should be able to create your own
@@ -17,9 +19,18 @@ copy of this site by following these steps.
 - clone this repo
 - `rm .workspace manifest.yml`
 
-## init copilot, run the app!
-This will get the web app up and running on AWS. The app is just a simple ngnix
-server. See the [Dockerfile](./Dockerfile).
+## build and run the site locally
+The app/site is just a simple ngnix server. See the [Dockerfile](./Dockerfile).
+
+```sh
+docker build -t aws-copilot-demo .
+docker run -d --rm -p 80:80 aws-copilot-demo
+curl localhost
+# You should see whatever is in index.html
+```
+
+## init copilot, run the app on AWS!
+This will get the web app up and running on AWS.
 
 ```sh
 copilot init
@@ -33,6 +44,8 @@ copilot init
 # copilot creates all necessary infrastructure (phew, no cloudformation!)
 # ...
 # eventually, you'll get a link to your app!
+# You can get the links at any time with:
+copilot svc show
 ```
 
 At this point, you'll have a number of cloudformation stacks. My knowledge of
@@ -96,6 +109,8 @@ copilot svc logs --follow
 
 # todo
 - how to bring down the app?
+    - just delete the cf stacks?
 - how to deploy on push?
     - https://aws.amazon.com/blogs/containers/automatically-deploying-your-container-application-with-aws-copilot/
 - how to monitor costs?
+- how to monitor health?
