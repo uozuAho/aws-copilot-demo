@@ -32,6 +32,13 @@ copilot init
 # eventually, you'll get a link to your app!
 ```
 
+At this point, you'll have a number of cloudformation stacks:
+
+![Initial cloudformation stacks](./docs/readme/img/initial_cf_stacks.png)
+
+I don't really understand what they all do, or which one is the 'app'. I think
+it's the top one??
+
 ## ops n stuff
 ```sh
 # stream app logs to your console
