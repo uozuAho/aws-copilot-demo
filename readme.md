@@ -14,7 +14,7 @@ Follows the tutorial here: https://aws.amazon.com/blogs/containers/introducing-a
 - clone this repo
 - `rm .workspace manifest.yml`
 
-## init copilot
+## init copilot, run the app!
 ```sh
 copilot init
 # choose an app name
@@ -28,3 +28,14 @@ copilot init
 # ...
 # eventually, you'll get a link to your app!
 ```
+
+## ops n stuff
+```sh
+# stream app logs to your console
+copilot svc logs --follow
+# you can also see these logs in AWS -> cloudwatch -> logs -> log groups ->  /copilot/aws-copilot-demo-test-aws-copilot-demo
+```
+
+# todo
+- how to bring down the app?
+- how to monitor costs?
