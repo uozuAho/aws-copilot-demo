@@ -5,7 +5,10 @@ Example of building and deploying an app using
 
 Follows the tutorial here: https://aws.amazon.com/blogs/containers/introducing-aws-copilot/
 
-# Getting started (from scratch)
+# Creating this project from scratch
+This is how this repo + sit was created. You should be able to create your own
+copy of this site by following these steps.
+
 ## install stuff
 - sign up to AWS
 - install [docker](https://www.docker.com/products/docker-desktop)
