@@ -139,7 +139,7 @@ The test environment deployment has test steps. In `pipeline.yml`, change the
 `test_commands` from `exit 0` to `exit 1`. This simulates a failing test. Now:
 
 ```sh
-# Pipeline updates are required after all changes to the pipeline
+# Pipeline updates are required after all changes to the pipeline :(
 copilot pipeline update
 git push
 ```
@@ -151,3 +151,6 @@ git push
     - just delete the cf stacks?
 - how to monitor costs?
 - how to monitor health?
+- how to customise the generated stacks? Eg. if I want to define some metrics/
+  alerts, can I put the cloudformation for them somewhere and have copilot
+  deploy it?
