@@ -144,11 +144,12 @@ copilot pipeline update
 git push
 ```
 
+## deleting everything
+```sh
+copilot app delete
+```
 
 # todo
-- how to bring down the app?
-    - `copilot app delete`?
-    - just delete the cf stacks?
 - how to monitor costs?
 - how to monitor health?
 - how to customise the generated stacks? Eg. if I want to define some metrics/
