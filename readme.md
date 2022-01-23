@@ -106,6 +106,25 @@ copilot svc logs --follow
 #   /copilot/aws-copilot-demo-[test|production]-aws-copilot-demo
 ```
 
+## deploying on push
+If you haven't already, create a github repo and push your changes. Then:
+
+```sh
+copilot pipeline init
+# select test & production environments
+```
+
+This creates a (quite large and complicated!) `buildspec.yml` file, and
+`pipeline.yml` file that define the build and deployment process. Commit these,
+then:
+
+```sh
+git push
+copilot pipeline update
+# you can check the pipeline status with:
+copilot pipeline status
+```
+
 # todo
 - how to bring down the app?
     - just delete the cf stacks?
