@@ -136,10 +136,13 @@ and production environments. Remember you can see the test & prod URLS with
 
 ## tests
 The test environment deployment has test steps. In `pipeline.yml`, change the
-`test_commands` from `exit 0` to `exit 1`. This simulates a failing test. Push
-the code and see what happens to the deployments.
+`test_commands` from `exit 0` to `exit 1`. This simulates a failing test. Now:
 
-> Important: after any change to the pipeline, you need to run `copilot pipeline update`
+```sh
+# Pipeline updates are required after all changes to the pipeline
+copilot pipeline update
+git push
+```
 
 
 # todo
