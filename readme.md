@@ -137,6 +137,8 @@ The test environment deployment has test steps. In `pipeline.yml`, change the
 `test_commands` from `exit 0` to `exit 1`. This simulates a failing test. Push
 the code and see what happens to the deployments.
 
+> Important: after any change to the pipeline, you need to run `copilot pipeline update`
+
 
 # todo
 - how to bring down the app?
