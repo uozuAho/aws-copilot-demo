@@ -121,7 +121,10 @@ then:
 ```sh
 git push
 copilot pipeline update
-# you can check the pipeline status with:
+# You will be prompted to add the AWS app to your github repo/account, in order
+# to allow AWS/copilot to watch your repo for changes.
+
+# You can check the pipeline status with:
 copilot pipeline status
 ```
 
