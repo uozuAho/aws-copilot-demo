@@ -128,6 +128,16 @@ copilot pipeline update
 copilot pipeline status
 ```
 
+Now whenever you push changes to git, the pipeline deploys changes to the test
+and production environments. Remember you can see the test & prod URLS with
+`copilot svc show`.
+
+## tests
+The test environment deployment has test steps. In `pipeline.yml`, change the
+`test_commands` from `exit 0` to `exit 1`. This simulates a failing test. Push
+the code and see what happens to the deployments.
+
+
 # todo
 - how to bring down the app?
     - just delete the cf stacks?
