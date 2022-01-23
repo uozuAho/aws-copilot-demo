@@ -24,7 +24,7 @@ source:
 stages:
     - name: test
       test_commands:
-        - exit 1
+        - exit 0
 
     - # The name of the environment.
       name: production

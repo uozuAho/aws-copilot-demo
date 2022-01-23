@@ -126,6 +126,8 @@ copilot pipeline update
 
 # You can check the pipeline status with:
 copilot pipeline status
+# You can also see the pipeline status at AWS -> CodePipeline -> Piplines ->
+#   pipeline-aws-copilot-demo-aws-copilot-demo
 ```
 
 Now whenever you push changes to git, the pipeline deploys changes to the test
@@ -142,6 +144,7 @@ the code and see what happens to the deployments.
 
 # todo
 - how to bring down the app?
+    - `copilot app delete`?
     - just delete the cf stacks?
 - how to monitor costs?
 - how to monitor health?
